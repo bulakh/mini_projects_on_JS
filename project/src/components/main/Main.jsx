@@ -19,9 +19,9 @@ function Main() {
           </Link>
         </li>
         <li className={styles.item}>
-          <Link to={AppRoute.CALC}>
+          <Link to={AppRoute.SLIDER}>
             <p className={styles.main__text}>
-              Calculator
+              Slider
             </p>
           </Link>
         </li>

@@ -4,7 +4,7 @@ import { AppRoute } from '../../const.js';
 import Main from '../main/Main.jsx'
 import NotPage404 from '../NotPage404/NotPage404.jsx';
 import TodoList from '../projects/TodoList/TodoList.jsx';
-import Calculator from '../projects/Calculator/Calculator.jsx';
+import Slider from '../projects/Slider/Slider.jsx';
 
 function App() {
 
@@ -17,8 +17,8 @@ function App() {
         <Route path={AppRoute.TODO}>
           <TodoList />
         </Route>
-        <Route path={AppRoute.CALC}>
-          <Calculator />
+        <Route path={AppRoute.SLIDER}>
+          <Slider />
         </Route>
         <Route>
           <NotPage404 />

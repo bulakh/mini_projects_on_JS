@@ -1,0 +1,14 @@
+.text {
+  position: absolute;
+  top: 0;
+  left: 6%;
+
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: normal;
+
+  &:hover {
+    color: #75A7C3;
+  }
+}
