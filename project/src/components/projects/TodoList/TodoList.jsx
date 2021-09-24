@@ -1,8 +1,8 @@
 import React, {useState, useRef} from "react";
-import { nanoid } from 'nanoid'
-import styles from './TodoList.module.scss'
-import generalStyles from '../../main/Main.module.scss'
-import cn from 'classnames'
+import { nanoid } from 'nanoid';
+import styles from './TodoList.module.scss';
+import generalStyles from '../../main/Main.module.scss';
+import cn from 'classnames';
 import Back from "../../Back/Back";
 
 const tasks = [
@@ -51,12 +51,12 @@ function TodoList() {
   }
 
   return (
-    <div className={styles.page}>
-      <h1 className={cn(generalStyles.main__title, styles.title)}>
+    <div className={generalStyles.page}>
+      <h1 className={cn(generalStyles.main__title, generalStyles.page__title)}>
         Todo List
       </h1>
       <Back />
-      <div className={styles.wrap}>
+      <div className={cn(generalStyles.wrap, styles.todo__wrap)}>
         <form className={cn(styles.block, styles.block__input)}>
           <input
             ref={inputRef}
@@ -77,7 +77,7 @@ function TodoList() {
               <li className={styles.task} key={task.id}>
                 <label className={styles.check}>
                   <input
-                    className={styles.check__input}
+                    className={cn(generalStyles.hidden, styles.check__input)}
                     type="checkbox"
                     defaultChecked={task.isDone ? 'checked' : ''}
                   />
