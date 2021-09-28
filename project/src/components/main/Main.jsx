@@ -3,6 +3,21 @@ import styles from './Main.module.scss';
 import { AppRoute } from "../../const";
 import { Link } from 'react-router-dom';
 
+const projects = [
+  {
+    title: 'Todo List',
+    route: AppRoute.TODO,
+  },
+  {
+    title: 'Slider',
+    route: AppRoute.SLIDER,
+  },
+  {
+    title: 'Password Generator',
+    route: AppRoute.GENERATOR,
+  },
+]
+
 function Main() {
 
   return (
@@ -11,20 +26,15 @@ function Main() {
         Mini projects on JavaScript
       </h1>
       <ul className={styles.main__list}>
-        <li className={styles.item}>
-          <Link to={AppRoute.TODO}>
-            <p className={styles.main__text}>
-              Todo List
-            </p>
-          </Link>
-        </li>
-        <li className={styles.item}>
-          <Link to={AppRoute.SLIDER}>
-            <p className={styles.main__text}>
-              Slider
-            </p>
-          </Link>
-        </li>
+        {projects.map(project => (
+          <li className={styles.item} key={project.title}>
+            <Link to={project.route}>
+              <p className={styles.main__text}>
+                {project.title}
+              </p>
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   )

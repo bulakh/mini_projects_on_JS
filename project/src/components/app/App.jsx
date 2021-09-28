@@ -5,6 +5,7 @@ import Main from '../main/Main.jsx'
 import NotPage404 from '../NotPage404/NotPage404.jsx';
 import TodoList from '../projects/TodoList/TodoList.jsx';
 import Slider from '../projects/Slider/Slider.jsx';
+import PasswordGenerator from '../projects/PasswordGenerator/PasswordGenerator.jsx';
 
 function App() {
 
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path={AppRoute.SLIDER}>
           <Slider />
+        </Route>
+        <Route path={AppRoute.GENERATOR}>
+          <PasswordGenerator />
         </Route>
         <Route>
           <NotPage404 />
