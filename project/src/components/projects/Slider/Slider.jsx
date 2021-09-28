@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from './Slider.module.scss';
 import generalStyles from '../../main/Main.module.scss';
-import cn from 'classnames';
+import cn from 'classnames'
 import { nanoid } from "nanoid";
 import { getRandomInteger } from "../../../util";
 import Back from "../../Back/Back";
@@ -10,7 +10,7 @@ import Back from "../../Back/Back";
 const getRandomPics = () => {
   const pictures = [];
 
-  for (let i=0; i < getRandomInteger(1, 12); i++) {
+  for (let i=0; i < getRandomInteger(4, 12); i++) {
     const randomPic = {
       id: nanoid(),
       src: `https://picsum.photos/id/${getRandomInteger(1, 1090)}/${getRandomInteger(450, 1000)}/${getRandomInteger(450, 1000)}`,

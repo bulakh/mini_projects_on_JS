@@ -4,3 +4,5 @@
 
 ## Проекты:
 1. Todo List
+2. Slider
+3. Password Generator

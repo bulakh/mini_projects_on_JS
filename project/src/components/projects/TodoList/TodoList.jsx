@@ -56,7 +56,7 @@ function TodoList() {
         Todo List
       </h1>
       <Back />
-      <div className={cn(generalStyles.wrap, styles.todo__wrap)}>
+      <div className={cn(generalStyles.wrap, generalStyles.page__wrap)}>
         <form className={cn(styles.block, styles.block__input)}>
           <input
             ref={inputRef}

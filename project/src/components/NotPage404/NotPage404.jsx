@@ -6,7 +6,7 @@ function NotPage404() {
   return (
     <>
       <h1>
-        Some thing wrong!
+        Something wrong!
       </h1>
       <Link to='/'>
         Go to main

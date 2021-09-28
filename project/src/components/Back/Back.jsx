@@ -14,4 +14,4 @@ function Back() {
   )
 }
 
-export default Back;
+export default React.memo(Back);
