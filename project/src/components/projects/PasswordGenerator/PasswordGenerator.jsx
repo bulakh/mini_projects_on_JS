@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState } from 'react';
 import styles from './PasswordGenerator.module.scss';
 import generalStyles from '../../main/Main.module.scss';
 import cn from 'classnames'
-import Back from "../../Back/Back";
-import { getRandomInteger } from "../../../util";
+import Back from '../../Back/Back';
+import { getRandomInteger } from '../../../util';
 import { alphabetUpper, alphabetLower, numbers, specialSymbols } from '../../../const'
 
 const initialCustoms = [
@@ -21,7 +21,7 @@ const initialCustoms = [
   },
   {
     title: 'Special symbols',
-    isChecked: true,
+    isChecked: false,
   },
   {
     title: 'Dont repeat',
@@ -99,7 +99,7 @@ function PasswordGenerator() {
       <Back />
       <section className={cn(generalStyles.wrap, generalStyles.page__wrap)}>
         <h2 className={generalStyles.hidden}>Password Generator</h2>
-        <form action="#" className={cn(styles.block, styles.block__form)}>
+        <form action='#' className={cn(styles.block, styles.block__form)}>
           <ul onChange = {checkNumber}>
             {customSettings.map(custom => (
               <li className={styles.item} key={custom.title}>
@@ -108,7 +108,7 @@ function PasswordGenerator() {
                   <input
                     data-name={custom.title}
                     className={cn(generalStyles.hidden, styles.check__input)}
-                    type="checkbox"
+                    type='checkbox'
                     defaultChecked={custom.isChecked ? 'checked' : false}
                   />
                   <span
@@ -123,7 +123,7 @@ function PasswordGenerator() {
                 <input
                   ref={lengthRef}
                   className={styles.check__length}
-                  type="text"
+                  type='text'
                   defaultValue={12}
                   maxLength='2'
                 />

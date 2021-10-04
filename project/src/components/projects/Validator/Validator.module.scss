@@ -1,0 +1,218 @@
+.page p {
+  margin: 0;
+}
+
+.page input, .page button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 746px;
+
+  background-color: #E4EAFF;
+  border-radius: 15px;
+
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.5em;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.list__label {
+  position: relative;
+
+  margin: 1.5em 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+
+  input {
+    width: 211px;
+  }
+}
+
+.password {
+  border-bottom: 1px solid #75A7C3;
+}
+
+.signature {
+  position: absolute;
+  bottom: -1.7rem;
+  right: 5.5rem;
+
+  color: #75A7C3;
+  font-size: 0.6em;
+}
+
+.done {
+  position: absolute;
+  right: -4rem;
+  bottom: 0.6rem;
+
+  width: 23px;
+  height: 23px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.41406' y='4.8995' width='8.05243' height='2' transform='rotate(45 1.41406 4.8995)' fill='%23142758'/%3E%3Crect x='5' y='9.8995' width='14' height='2' transform='rotate(-45 5 9.8995)' fill='%23142758'/%3E%3C/svg%3E");
+}
+
+.wrap {
+  width: 447px;
+
+  font-size: 0.5em;
+  line-height: normal;
+
+  color: white;
+  background-color: #75A7C3;
+  border-radius: 10px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2rem 0;
+  grid-template-areas:
+    "number number"
+    "name name"
+    "date cvv";
+
+
+  margin: 0;
+  padding: 2rem;
+
+  &__number {
+    grid-area: number;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__date {
+    grid-area: date;
+
+    & input {
+      width: 50%;
+    }
+  }
+
+  &__cvv {
+    grid-area: cvv;
+
+    & input {
+      width: 46%;
+    }
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  & input {
+    font-size: 2em;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+.card__done {
+  position: absolute;
+  right: -2rem;
+  bottom: 0;
+
+
+  width: 23px;
+  height: 23px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.41406' y='4.8995' width='8.05243' height='2' transform='rotate(45 1.41406 4.8995)' fill='white'/%3E%3Crect x='5' y='9.89949' width='14' height='2' transform='rotate(-45 5 9.89949)' fill='white'/%3E%3C/svg%3E");
+}
+
+
+.form__button {
+  margin: 2rem;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #75A7C3;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #1042c0;
+  }
+
+  &:disabled {
+    color: #868787;
+    cursor: default;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay__shown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  position: absolute;
+  top: 40%;
+  left: 36%;
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.5em;
+
+  background-color: #E4EAFF;
+  border-radius: 15px;
+  border: 9px solid #142758;
+
+  & p {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+
