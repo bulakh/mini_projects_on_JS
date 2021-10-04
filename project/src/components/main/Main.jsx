@@ -16,6 +16,10 @@ const projects = [
     title: 'Password Generator',
     route: AppRoute.GENERATOR,
   },
+  {
+    title: 'Form Validator',
+    route: AppRoute.VALIDATOR,
+  },
 ]
 
 function Main() {

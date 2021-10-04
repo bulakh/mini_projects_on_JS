@@ -3,6 +3,7 @@ export const AppRoute = {
   TODO: '/todolist',
   SLIDER: '/slider',
   GENERATOR: '/generator',
+  VALIDATOR: '/validator',
 }
 
 export const alphabetUpper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
