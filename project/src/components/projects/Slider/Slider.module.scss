@@ -28,7 +28,11 @@
 .picture {
   max-height: 500px;
 
-  margin-bottom: 2rem;
+
+  &__wrap {
+    height: 500px;
+    margin-bottom: 2rem;
+  }
 }
 
 .buttons {

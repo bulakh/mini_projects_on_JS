@@ -61,11 +61,13 @@ function Slider() {
       <Back />
       <section className={generalStyles.wrap}>
         <h2 className={generalStyles.hidden}>Slider block</h2>
-        <img
-          onError={removeBrokenPics}
-          className={styles.picture}
-          src={pic.src}
-          alt={pic.alt} />
+        <div className={styles.picture__wrap}>
+          <img
+            onError={removeBrokenPics}
+            className={styles.picture}
+            src={pic.src}
+            alt={pic.alt} />
+        </div>
         <div className={styles.buttons} onClick={navPic}>
           <button
             className={styles.buttons__left}
