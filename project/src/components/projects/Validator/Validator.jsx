@@ -4,6 +4,7 @@ import styles from './Validator.module.scss';
 import generalStyles from '../../main/Main.module.scss';
 import cn from 'classnames';
 import Back from '../../Back/Back';
+import ConfettiShow from '../../Confetti/Confetti';
 import { alphabetUpper, alphabetLower, numbers, specialSymbols } from '../../../const'
 
 
@@ -28,8 +29,9 @@ function Validator() {
   const cvvCard = useRef();
 
 
+  const showOverlay = (evt) => {
+    evt.preventDefault();
 
-  const showOverlay = () => {
     setOverlay(cn(styles.overlay, styles.overlay__shown));
   }
 
@@ -212,6 +214,7 @@ function Validator() {
           </button>
         </form>
         <div className={overlay}>
+          <ConfettiShow />
           <div className={styles.popup}>
             <p>Congratulations, you passed the validation!</p>
             <button
